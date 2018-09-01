@@ -227,11 +227,14 @@ static void* Swig_malloc(int c) {
 
 #include <lime/LimeSuite.h>
 
+
+#include <stdint.h>		// Use the C99 official header
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void _wrap_Swig_free_limewrap_a2e644da1ad7f293(void *_swig_go_0) {
+void _wrap_Swig_free_limewrap_a37b50197546cf98(void *_swig_go_0) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&_swig_go_0; 
@@ -241,7 +244,7 @@ void _wrap_Swig_free_limewrap_a2e644da1ad7f293(void *_swig_go_0) {
 }
 
 
-void *_wrap_Swig_malloc_limewrap_a2e644da1ad7f293(intgo _swig_go_0) {
+void *_wrap_Swig_malloc_limewrap_a37b50197546cf98(intgo _swig_go_0) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -254,7 +257,7 @@ void *_wrap_Swig_malloc_limewrap_a2e644da1ad7f293(intgo _swig_go_0) {
 }
 
 
-intgo _wrap_LMS_SUCCESS_get_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_SUCCESS_get_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -265,7 +268,7 @@ intgo _wrap_LMS_SUCCESS_get_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_GetDeviceList_limewrap_a2e644da1ad7f293(_gostring_* _swig_go_0) {
+intgo _wrap_LMS_GetDeviceList_limewrap_a37b50197546cf98(_gostring_* _swig_go_0) {
   lms_info_str_t *arg1 = (lms_info_str_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -278,7 +281,7 @@ intgo _wrap_LMS_GetDeviceList_limewrap_a2e644da1ad7f293(_gostring_* _swig_go_0) 
 }
 
 
-intgo _wrap_LMS_Open_limewrap_a2e644da1ad7f293(lms_device_t **_swig_go_0, _gostring_ _swig_go_1, void *_swig_go_2) {
+intgo _wrap_LMS_Open_limewrap_a37b50197546cf98(lms_device_t **_swig_go_0, _gostring_ _swig_go_1, void *_swig_go_2) {
   lms_device_t **arg1 = (lms_device_t **) 0 ;
   char *arg2 ;
   void *arg3 = (void *) 0 ;
@@ -300,7 +303,7 @@ intgo _wrap_LMS_Open_limewrap_a2e644da1ad7f293(lms_device_t **_swig_go_0, _gostr
 }
 
 
-intgo _wrap_LMS_Close_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
+intgo _wrap_LMS_Close_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -313,7 +316,7 @@ intgo _wrap_LMS_Close_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
 }
 
 
-intgo _wrap_LMS_Disconnect_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
+intgo _wrap_LMS_Disconnect_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -326,7 +329,7 @@ intgo _wrap_LMS_Disconnect_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
 }
 
 
-bool _wrap_LMS_IsOpen_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, intgo _swig_go_1) {
+bool _wrap_LMS_IsOpen_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, intgo _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   int arg2 ;
   bool result;
@@ -341,7 +344,7 @@ bool _wrap_LMS_IsOpen_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, intgo 
 }
 
 
-bool _wrap_LMS_CH_TX_get_limewrap_a2e644da1ad7f293() {
+bool _wrap_LMS_CH_TX_get_limewrap_a37b50197546cf98() {
   bool result;
   bool _swig_go_result;
   
@@ -352,7 +355,7 @@ bool _wrap_LMS_CH_TX_get_limewrap_a2e644da1ad7f293() {
 }
 
 
-bool _wrap_LMS_CH_RX_get_limewrap_a2e644da1ad7f293() {
+bool _wrap_LMS_CH_RX_get_limewrap_a37b50197546cf98() {
   bool result;
   bool _swig_go_result;
   
@@ -363,7 +366,7 @@ bool _wrap_LMS_CH_RX_get_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_lms_range_t_min_set_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0, double _swig_go_1) {
+void _wrap_lms_range_t_min_set_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0, double _swig_go_1) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   float_type arg2 ;
   
@@ -375,7 +378,7 @@ void _wrap_lms_range_t_min_set_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0
 }
 
 
-double _wrap_lms_range_t_min_get_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0) {
+double _wrap_lms_range_t_min_get_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   float_type result;
   double _swig_go_result;
@@ -388,7 +391,7 @@ double _wrap_lms_range_t_min_get_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go
 }
 
 
-void _wrap_lms_range_t_max_set_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0, double _swig_go_1) {
+void _wrap_lms_range_t_max_set_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0, double _swig_go_1) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   float_type arg2 ;
   
@@ -400,7 +403,7 @@ void _wrap_lms_range_t_max_set_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0
 }
 
 
-double _wrap_lms_range_t_max_get_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0) {
+double _wrap_lms_range_t_max_get_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   float_type result;
   double _swig_go_result;
@@ -413,7 +416,7 @@ double _wrap_lms_range_t_max_get_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go
 }
 
 
-void _wrap_lms_range_t_step_set_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0, double _swig_go_1) {
+void _wrap_lms_range_t_step_set_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0, double _swig_go_1) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   float_type arg2 ;
   
@@ -425,7 +428,7 @@ void _wrap_lms_range_t_step_set_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_
 }
 
 
-double _wrap_lms_range_t_step_get_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0) {
+double _wrap_lms_range_t_step_get_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   float_type result;
   double _swig_go_result;
@@ -438,7 +441,7 @@ double _wrap_lms_range_t_step_get_limewrap_a2e644da1ad7f293(lms_range_t *_swig_g
 }
 
 
-lms_range_t *_wrap_new_lms_range_t_limewrap_a2e644da1ad7f293() {
+lms_range_t *_wrap_new_lms_range_t_limewrap_a37b50197546cf98() {
   lms_range_t *result = 0 ;
   lms_range_t *_swig_go_result;
   
@@ -449,7 +452,7 @@ lms_range_t *_wrap_new_lms_range_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_delete_lms_range_t_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0) {
+void _wrap_delete_lms_range_t_limewrap_a37b50197546cf98(lms_range_t *_swig_go_0) {
   lms_range_t *arg1 = (lms_range_t *) 0 ;
   
   arg1 = *(lms_range_t **)&_swig_go_0; 
@@ -459,7 +462,7 @@ void _wrap_delete_lms_range_t_limewrap_a2e644da1ad7f293(lms_range_t *_swig_go_0)
 }
 
 
-intgo _wrap_LMS_TESTSIG_NONE_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_TESTSIG_NONE_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -471,7 +474,7 @@ intgo _wrap_LMS_TESTSIG_NONE_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_TESTSIG_NCODIV8_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_TESTSIG_NCODIV8_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -483,7 +486,7 @@ intgo _wrap_LMS_TESTSIG_NCODIV8_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_TESTSIG_NCODIV4_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_TESTSIG_NCODIV4_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -495,7 +498,7 @@ intgo _wrap_LMS_TESTSIG_NCODIV4_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_TESTSIG_NCODIV8F_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_TESTSIG_NCODIV8F_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -507,7 +510,7 @@ intgo _wrap_LMS_TESTSIG_NCODIV8F_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_TESTSIG_NCODIV4F_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_TESTSIG_NCODIV4F_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -519,7 +522,7 @@ intgo _wrap_LMS_TESTSIG_NCODIV4F_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_TESTSIG_DC_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_TESTSIG_DC_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -531,7 +534,7 @@ intgo _wrap_LMS_TESTSIG_DC_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_Init_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
+intgo _wrap_LMS_Init_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -544,7 +547,7 @@ intgo _wrap_LMS_Init_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
 }
 
 
-intgo _wrap_LMS_GetNumChannels_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1) {
+intgo _wrap_LMS_GetNumChannels_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   int result;
@@ -559,7 +562,7 @@ intgo _wrap_LMS_GetNumChannels_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_
 }
 
 
-intgo _wrap_LMS_EnableChannel_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, bool _swig_go_3) {
+intgo _wrap_LMS_EnableChannel_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, bool _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -578,7 +581,7 @@ intgo _wrap_LMS_EnableChannel_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_SetSampleRate_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, double _swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_SetSampleRate_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, double _swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   float_type arg2 ;
   size_t arg3 ;
@@ -595,7 +598,7 @@ intgo _wrap_LMS_SetSampleRate_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_GetSampleRate_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double *_swig_go_4) {
+intgo _wrap_LMS_GetSampleRate_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double *_swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -616,7 +619,7 @@ intgo _wrap_LMS_GetSampleRate_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_GetSampleRateRange_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, lms_range_t *_swig_go_2) {
+intgo _wrap_LMS_GetSampleRateRange_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, lms_range_t *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   lms_range_t *arg3 = (lms_range_t *) 0 ;
@@ -633,7 +636,7 @@ intgo _wrap_LMS_GetSampleRateRange_limewrap_a2e644da1ad7f293(lms_device_t *_swig
 }
 
 
-intgo _wrap_LMS_SetLOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3) {
+intgo _wrap_LMS_SetLOFrequency_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -652,7 +655,7 @@ intgo _wrap_LMS_SetLOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_
 }
 
 
-intgo _wrap_LMS_GetLOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3) {
+intgo _wrap_LMS_GetLOFrequency_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -671,7 +674,7 @@ intgo _wrap_LMS_GetLOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_
 }
 
 
-intgo _wrap_LMS_GetLOFrequencyRange_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, lms_range_t *_swig_go_2) {
+intgo _wrap_LMS_GetLOFrequencyRange_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, lms_range_t *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   lms_range_t *arg3 = (lms_range_t *) 0 ;
@@ -688,7 +691,7 @@ intgo _wrap_LMS_GetLOFrequencyRange_limewrap_a2e644da1ad7f293(lms_device_t *_swi
 }
 
 
-intgo _wrap_LMS_PATH_NONE_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_PATH_NONE_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -700,7 +703,7 @@ intgo _wrap_LMS_PATH_NONE_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_PATH_LNAH_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_PATH_LNAH_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -712,7 +715,7 @@ intgo _wrap_LMS_PATH_LNAH_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_PATH_LNAL_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_PATH_LNAL_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -724,7 +727,7 @@ intgo _wrap_LMS_PATH_LNAL_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_PATH_LNAW_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_PATH_LNAW_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -736,7 +739,7 @@ intgo _wrap_LMS_PATH_LNAW_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_PATH_TX1_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_PATH_TX1_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -748,7 +751,7 @@ intgo _wrap_LMS_PATH_TX1_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_PATH_TX2_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_PATH_TX2_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -760,7 +763,7 @@ intgo _wrap_LMS_PATH_TX2_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_GetAntennaList_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, _gostring_* _swig_go_3) {
+intgo _wrap_LMS_GetAntennaList_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, _gostring_* _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -779,7 +782,7 @@ intgo _wrap_LMS_GetAntennaList_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_
 }
 
 
-intgo _wrap_LMS_SetAntenna_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, long long _swig_go_3) {
+intgo _wrap_LMS_SetAntenna_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, long long _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -798,7 +801,7 @@ intgo _wrap_LMS_SetAntenna_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, b
 }
 
 
-intgo _wrap_LMS_GetAntenna_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_GetAntenna_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -815,7 +818,7 @@ intgo _wrap_LMS_GetAntenna_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, b
 }
 
 
-intgo _wrap_LMS_GetAntennaBW_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, long long _swig_go_3, lms_range_t *_swig_go_4) {
+intgo _wrap_LMS_GetAntennaBW_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, long long _swig_go_3, lms_range_t *_swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -836,7 +839,7 @@ intgo _wrap_LMS_GetAntennaBW_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
 }
 
 
-intgo _wrap_LMS_SetNormalizedGain_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3) {
+intgo _wrap_LMS_SetNormalizedGain_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -855,7 +858,7 @@ intgo _wrap_LMS_SetNormalizedGain_limewrap_a2e644da1ad7f293(lms_device_t *_swig_
 }
 
 
-intgo _wrap_LMS_SetGaindB_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3) {
+intgo _wrap_LMS_SetGaindB_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -874,7 +877,7 @@ intgo _wrap_LMS_SetGaindB_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bo
 }
 
 
-intgo _wrap_LMS_GetNormalizedGain_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3) {
+intgo _wrap_LMS_GetNormalizedGain_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -893,7 +896,7 @@ intgo _wrap_LMS_GetNormalizedGain_limewrap_a2e644da1ad7f293(lms_device_t *_swig_
 }
 
 
-intgo _wrap_LMS_GetGaindB_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo *_swig_go_3) {
+intgo _wrap_LMS_GetGaindB_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo *_swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -912,7 +915,7 @@ intgo _wrap_LMS_GetGaindB_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bo
 }
 
 
-intgo _wrap_LMS_SetLPFBW_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3) {
+intgo _wrap_LMS_SetLPFBW_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -931,7 +934,7 @@ intgo _wrap_LMS_SetLPFBW_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, boo
 }
 
 
-intgo _wrap_LMS_GetLPFBW_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3) {
+intgo _wrap_LMS_GetLPFBW_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -950,7 +953,7 @@ intgo _wrap_LMS_GetLPFBW_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, boo
 }
 
 
-intgo _wrap_LMS_GetLPFBWRange_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, lms_range_t *_swig_go_2) {
+intgo _wrap_LMS_GetLPFBWRange_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, lms_range_t *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   lms_range_t *arg3 = (lms_range_t *) 0 ;
@@ -967,7 +970,7 @@ intgo _wrap_LMS_GetLPFBWRange_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_SetLPF_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, bool _swig_go_3) {
+intgo _wrap_LMS_SetLPF_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, bool _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -986,7 +989,7 @@ intgo _wrap_LMS_SetLPF_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool 
 }
 
 
-intgo _wrap_LMS_SetGFIRLPF_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, bool _swig_go_3, double _swig_go_4) {
+intgo _wrap_LMS_SetGFIRLPF_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, bool _swig_go_3, double _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1007,7 +1010,7 @@ intgo _wrap_LMS_SetGFIRLPF_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, b
 }
 
 
-intgo _wrap_LMS_Calibrate_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3, intgo _swig_go_4) {
+intgo _wrap_LMS_Calibrate_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double _swig_go_3, intgo _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1028,7 +1031,7 @@ intgo _wrap_LMS_Calibrate_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bo
 }
 
 
-intgo _wrap_LMS_LoadConfig_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _gostring_ _swig_go_1) {
+intgo _wrap_LMS_LoadConfig_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   char *arg2 = (char *) 0 ;
   int result;
@@ -1048,7 +1051,7 @@ intgo _wrap_LMS_LoadConfig_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _
 }
 
 
-intgo _wrap_LMS_SaveConfig_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _gostring_ _swig_go_1) {
+intgo _wrap_LMS_SaveConfig_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   char *arg2 = (char *) 0 ;
   int result;
@@ -1068,15 +1071,13 @@ intgo _wrap_LMS_SaveConfig_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _
 }
 
 
-intgo _wrap_LMS_SetTestSignal_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, int16_t *_swig_go_4, int16_t *_swig_go_5) {
+intgo _wrap_LMS_SetTestSignal_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, short _swig_go_4, short _swig_go_5) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
   lms_testsig_t arg4 ;
   int16_t arg5 ;
   int16_t arg6 ;
-  int16_t *argp5 ;
-  int16_t *argp6 ;
   int result;
   intgo _swig_go_result;
   
@@ -1084,20 +1085,8 @@ intgo _wrap_LMS_SetTestSignal_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
   arg2 = (bool)_swig_go_1; 
   arg3 = (size_t)_swig_go_2; 
   arg4 = (lms_testsig_t)_swig_go_3; 
-  
-  argp5 = (int16_t *)_swig_go_4;
-  if (argp5 == NULL) {
-    _swig_gopanic("Attempt to dereference null int16_t");
-  }
-  arg5 = (int16_t)*argp5;
-  
-  
-  argp6 = (int16_t *)_swig_go_5;
-  if (argp6 == NULL) {
-    _swig_gopanic("Attempt to dereference null int16_t");
-  }
-  arg6 = (int16_t)*argp6;
-  
+  arg5 = (int16_t)_swig_go_4; 
+  arg6 = (int16_t)_swig_go_5; 
   
   result = (int)LMS_SetTestSignal(arg1,arg2,arg3,arg4,arg5,arg6);
   _swig_go_result = result; 
@@ -1105,7 +1094,7 @@ intgo _wrap_LMS_SetTestSignal_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_GetTestSignal_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, lms_testsig_t *_swig_go_3) {
+intgo _wrap_LMS_GetTestSignal_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, lms_testsig_t *_swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1124,7 +1113,7 @@ intgo _wrap_LMS_GetTestSignal_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_GFIR1_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_GFIR1_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -1136,7 +1125,7 @@ intgo _wrap_LMS_GFIR1_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_GFIR2_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_GFIR2_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -1148,7 +1137,7 @@ intgo _wrap_LMS_GFIR2_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_GFIR3_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_GFIR3_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -1160,7 +1149,7 @@ intgo _wrap_LMS_GFIR3_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_NCO_VAL_COUNT_get_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_NCO_VAL_COUNT_get_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -1171,7 +1160,7 @@ intgo _wrap_LMS_NCO_VAL_COUNT_get_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_SetSampleRateDir_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, double _swig_go_2, long long _swig_go_3) {
+intgo _wrap_LMS_SetSampleRateDir_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, double _swig_go_2, long long _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   float_type arg3 ;
@@ -1190,7 +1179,7 @@ intgo _wrap_LMS_SetSampleRateDir_limewrap_a2e644da1ad7f293(lms_device_t *_swig_g
 }
 
 
-intgo _wrap_LMS_SetNCOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double _swig_go_4) {
+intgo _wrap_LMS_SetNCOFrequency_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1211,7 +1200,7 @@ intgo _wrap_LMS_SetNCOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go
 }
 
 
-intgo _wrap_LMS_GetNCOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double *_swig_go_4) {
+intgo _wrap_LMS_GetNCOFrequency_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double *_swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1232,7 +1221,7 @@ intgo _wrap_LMS_GetNCOFrequency_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go
 }
 
 
-intgo _wrap_LMS_SetNCOPhase_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double _swig_go_4) {
+intgo _wrap_LMS_SetNCOPhase_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1253,7 +1242,7 @@ intgo _wrap_LMS_SetNCOPhase_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_GetNCOPhase_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double *_swig_go_4) {
+intgo _wrap_LMS_GetNCOPhase_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, double *_swig_go_3, double *_swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1274,7 +1263,7 @@ intgo _wrap_LMS_GetNCOPhase_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_SetNCOIndex_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, bool _swig_go_4) {
+intgo _wrap_LMS_SetNCOIndex_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, bool _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1295,7 +1284,7 @@ intgo _wrap_LMS_SetNCOIndex_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_GetNCOIndex_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_GetNCOIndex_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1312,7 +1301,7 @@ intgo _wrap_LMS_GetNCOIndex_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_ReadParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, struct LMS7Parameter *_swig_go_1, uint16_t *_swig_go_2) {
+intgo _wrap_LMS_ReadParam_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, struct LMS7Parameter *_swig_go_1, short *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   struct LMS7Parameter arg2 ;
   uint16_t *arg3 = (uint16_t *) 0 ;
@@ -1336,12 +1325,11 @@ intgo _wrap_LMS_ReadParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, st
 }
 
 
-intgo _wrap_LMS_WriteParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, struct LMS7Parameter *_swig_go_1, uint16_t *_swig_go_2) {
+intgo _wrap_LMS_WriteParam_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, struct LMS7Parameter *_swig_go_1, short _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   struct LMS7Parameter arg2 ;
   uint16_t arg3 ;
   struct LMS7Parameter *argp2 ;
-  uint16_t *argp3 ;
   int result;
   intgo _swig_go_result;
   
@@ -1353,13 +1341,7 @@ intgo _wrap_LMS_WriteParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, s
   }
   arg2 = (struct LMS7Parameter)*argp2;
   
-  
-  argp3 = (uint16_t *)_swig_go_2;
-  if (argp3 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint16_t");
-  }
-  arg3 = (uint16_t)*argp3;
-  
+  arg3 = (uint16_t)_swig_go_2; 
   
   result = (int)LMS_WriteParam(arg1,arg2,arg3);
   _swig_go_result = result; 
@@ -1367,7 +1349,7 @@ intgo _wrap_LMS_WriteParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, s
 }
 
 
-intgo _wrap_LMS_SetGFIRCoeff_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, double *_swig_go_4, long long _swig_go_5) {
+intgo _wrap_LMS_SetGFIRCoeff_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, double *_swig_go_4, long long _swig_go_5) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1390,7 +1372,7 @@ intgo _wrap_LMS_SetGFIRCoeff_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
 }
 
 
-intgo _wrap_LMS_GetGFIRCoeff_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, double *_swig_go_4) {
+intgo _wrap_LMS_GetGFIRCoeff_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, double *_swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1411,7 +1393,7 @@ intgo _wrap_LMS_GetGFIRCoeff_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
 }
 
 
-intgo _wrap_LMS_SetGFIR_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, bool _swig_go_4) {
+intgo _wrap_LMS_SetGFIR_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1, long long _swig_go_2, intgo _swig_go_3, bool _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   size_t arg3 ;
@@ -1432,21 +1414,14 @@ intgo _wrap_LMS_SetGFIR_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool
 }
 
 
-intgo _wrap_LMS_VCTCXOWrite_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint16_t *_swig_go_1) {
+intgo _wrap_LMS_VCTCXOWrite_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, short _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint16_t arg2 ;
-  uint16_t *argp2 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint16_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint16_t");
-  }
-  arg2 = (uint16_t)*argp2;
-  
+  arg2 = (uint16_t)_swig_go_1; 
   
   result = (int)LMS_VCTCXOWrite(arg1,arg2);
   _swig_go_result = result; 
@@ -1454,7 +1429,7 @@ intgo _wrap_LMS_VCTCXOWrite_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_VCTCXORead_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint16_t *_swig_go_1) {
+intgo _wrap_LMS_VCTCXORead_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, short *_swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint16_t *arg2 = (uint16_t *) 0 ;
   int result;
@@ -1469,7 +1444,7 @@ intgo _wrap_LMS_VCTCXORead_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, u
 }
 
 
-intgo _wrap_LMS_Reset_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
+intgo _wrap_LMS_Reset_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -1482,22 +1457,15 @@ intgo _wrap_LMS_Reset_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
 }
 
 
-intgo _wrap_LMS_ReadLMSReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint32_t *_swig_go_1, uint16_t *_swig_go_2) {
+intgo _wrap_LMS_ReadLMSReg_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, intgo _swig_go_1, short *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint32_t arg2 ;
   uint16_t *arg3 = (uint16_t *) 0 ;
-  uint32_t *argp2 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   arg3 = *(uint16_t **)&_swig_go_2; 
   
   result = (int)LMS_ReadLMSReg(arg1,arg2,arg3);
@@ -1506,30 +1474,16 @@ intgo _wrap_LMS_ReadLMSReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, u
 }
 
 
-intgo _wrap_LMS_WriteLMSReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint32_t *_swig_go_1, uint16_t *_swig_go_2) {
+intgo _wrap_LMS_WriteLMSReg_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, intgo _swig_go_1, short _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint32_t arg2 ;
   uint16_t arg3 ;
-  uint32_t *argp2 ;
-  uint16_t *argp3 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
-  
-  argp3 = (uint16_t *)_swig_go_2;
-  if (argp3 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint16_t");
-  }
-  arg3 = (uint16_t)*argp3;
-  
+  arg2 = (uint32_t)_swig_go_1; 
+  arg3 = (uint16_t)_swig_go_2; 
   
   result = (int)LMS_WriteLMSReg(arg1,arg2,arg3);
   _swig_go_result = result; 
@@ -1537,22 +1491,15 @@ intgo _wrap_LMS_WriteLMSReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_ReadFPGAReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint32_t *_swig_go_1, uint16_t *_swig_go_2) {
+intgo _wrap_LMS_ReadFPGAReg_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, intgo _swig_go_1, short *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint32_t arg2 ;
   uint16_t *arg3 = (uint16_t *) 0 ;
-  uint32_t *argp2 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   arg3 = *(uint16_t **)&_swig_go_2; 
   
   result = (int)LMS_ReadFPGAReg(arg1,arg2,arg3);
@@ -1561,30 +1508,16 @@ intgo _wrap_LMS_ReadFPGAReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_WriteFPGAReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint32_t *_swig_go_1, uint16_t *_swig_go_2) {
+intgo _wrap_LMS_WriteFPGAReg_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, intgo _swig_go_1, short _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint32_t arg2 ;
   uint16_t arg3 ;
-  uint32_t *argp2 ;
-  uint16_t *argp3 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
-  
-  argp3 = (uint16_t *)_swig_go_2;
-  if (argp3 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint16_t");
-  }
-  arg3 = (uint16_t)*argp3;
-  
+  arg2 = (uint32_t)_swig_go_1; 
+  arg3 = (uint16_t)_swig_go_2; 
   
   result = (int)LMS_WriteFPGAReg(arg1,arg2,arg3);
   _swig_go_result = result; 
@@ -1592,23 +1525,16 @@ intgo _wrap_LMS_WriteFPGAReg_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
 }
 
 
-intgo _wrap_LMS_ReadCustomBoardParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint8_t *_swig_go_1, double *_swig_go_2, _gostring_ _swig_go_3) {
+intgo _wrap_LMS_ReadCustomBoardParam_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, char _swig_go_1, double *_swig_go_2, _gostring_ _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint8_t arg2 ;
   float_type *arg3 = (float_type *) 0 ;
   char *arg4 ;
-  uint8_t *argp2 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint8_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint8_t");
-  }
-  arg2 = (uint8_t)*argp2;
-  
+  arg2 = (uint8_t)_swig_go_1; 
   arg3 = *(float_type **)&_swig_go_2; 
   
   arg4 = (char *)malloc(_swig_go_3.n + 1);
@@ -1623,23 +1549,16 @@ intgo _wrap_LMS_ReadCustomBoardParam_limewrap_a2e644da1ad7f293(lms_device_t *_sw
 }
 
 
-intgo _wrap_LMS_WriteCustomBoardParam_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint8_t *_swig_go_1, double _swig_go_2, _gostring_ _swig_go_3) {
+intgo _wrap_LMS_WriteCustomBoardParam_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, char _swig_go_1, double _swig_go_2, _gostring_ _swig_go_3) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint8_t arg2 ;
   float_type arg3 ;
   char *arg4 ;
-  uint8_t *argp2 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
-  
-  argp2 = (uint8_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint8_t");
-  }
-  arg2 = (uint8_t)*argp2;
-  
+  arg2 = (uint8_t)_swig_go_1; 
   arg3 = (float_type)_swig_go_2; 
   
   arg4 = (char *)malloc(_swig_go_3.n + 1);
@@ -1654,7 +1573,7 @@ intgo _wrap_LMS_WriteCustomBoardParam_limewrap_a2e644da1ad7f293(lms_device_t *_s
 }
 
 
-intgo _wrap_LMS_GetClockFreq_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, long long _swig_go_1, double *_swig_go_2) {
+intgo _wrap_LMS_GetClockFreq_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, long long _swig_go_1, double *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   size_t arg2 ;
   float_type *arg3 = (float_type *) 0 ;
@@ -1671,7 +1590,7 @@ intgo _wrap_LMS_GetClockFreq_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
 }
 
 
-intgo _wrap_LMS_SetClockFreq_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, long long _swig_go_1, double _swig_go_2) {
+intgo _wrap_LMS_SetClockFreq_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, long long _swig_go_1, double _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   size_t arg2 ;
   float_type arg3 ;
@@ -1688,7 +1607,7 @@ intgo _wrap_LMS_SetClockFreq_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
 }
 
 
-intgo _wrap_LMS_Synchronize_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1) {
+intgo _wrap_LMS_Synchronize_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   int result;
@@ -1703,7 +1622,7 @@ intgo _wrap_LMS_Synchronize_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_GPIORead_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint8_t *_swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_GPIORead_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, char *_swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
@@ -1720,7 +1639,7 @@ intgo _wrap_LMS_GPIORead_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uin
 }
 
 
-intgo _wrap_LMS_GPIOWrite_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint8_t *_swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_GPIOWrite_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, char *_swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
@@ -1731,13 +1650,13 @@ intgo _wrap_LMS_GPIOWrite_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, ui
   arg2 = *(uint8_t **)&_swig_go_1; 
   arg3 = (size_t)_swig_go_2; 
   
-  result = (int)LMS_GPIOWrite(arg1,(uint8_t const *)arg2,arg3);
+  result = (int)LMS_GPIOWrite(arg1,(unsigned char const *)arg2,arg3);
   _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-intgo _wrap_LMS_GPIODirRead_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint8_t *_swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_GPIODirRead_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, char *_swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
@@ -1754,7 +1673,7 @@ intgo _wrap_LMS_GPIODirRead_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_GPIODirWrite_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, uint8_t *_swig_go_1, long long _swig_go_2) {
+intgo _wrap_LMS_GPIODirWrite_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, char *_swig_go_1, long long _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   uint8_t *arg2 = (uint8_t *) 0 ;
   size_t arg3 ;
@@ -1765,13 +1684,13 @@ intgo _wrap_LMS_GPIODirWrite_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0,
   arg2 = *(uint8_t **)&_swig_go_1; 
   arg3 = (size_t)_swig_go_2; 
   
-  result = (int)LMS_GPIODirWrite(arg1,(uint8_t const *)arg2,arg3);
+  result = (int)LMS_GPIODirWrite(arg1,(unsigned char const *)arg2,arg3);
   _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-intgo _wrap_LMS_EnableCalibCache_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, bool _swig_go_1) {
+intgo _wrap_LMS_EnableCalibCache_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, bool _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   bool arg2 ;
   int result;
@@ -1786,7 +1705,7 @@ intgo _wrap_LMS_EnableCalibCache_limewrap_a2e644da1ad7f293(lms_device_t *_swig_g
 }
 
 
-intgo _wrap_LMS_GetChipTemperature_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, long long _swig_go_1, double *_swig_go_2) {
+intgo _wrap_LMS_GetChipTemperature_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, long long _swig_go_1, double *_swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   size_t arg2 ;
   float_type *arg3 = (float_type *) 0 ;
@@ -1803,43 +1722,32 @@ intgo _wrap_LMS_GetChipTemperature_limewrap_a2e644da1ad7f293(lms_device_t *_swig
 }
 
 
-void _wrap_lms_stream_meta_t_timestamp_set_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0, uint64_t *_swig_go_1) {
+void _wrap_lms_stream_meta_t_timestamp_set_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0, long long _swig_go_1) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   uint64_t arg2 ;
-  uint64_t *argp2 ;
   
   arg1 = *(lms_stream_meta_t **)&_swig_go_0; 
-  
-  argp2 = (uint64_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint64_t");
-  }
-  arg2 = (uint64_t)*argp2;
-  
+  arg2 = (uint64_t)_swig_go_1; 
   
   if (arg1) (arg1)->timestamp = arg2;
   
 }
 
 
-uint64_t *_wrap_lms_stream_meta_t_timestamp_get_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0) {
+long long _wrap_lms_stream_meta_t_timestamp_get_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   uint64_t result;
-  uint64_t *_swig_go_result;
+  long long _swig_go_result;
   
   arg1 = *(lms_stream_meta_t **)&_swig_go_0; 
   
-  result =  ((arg1)->timestamp);
-  {
-    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
-    memmove(resultptr, &result, sizeof(uint64_t));
-    *(uint64_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint64_t) ((arg1)->timestamp);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_meta_t_waitForTimestamp_set_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0, bool _swig_go_1) {
+void _wrap_lms_stream_meta_t_waitForTimestamp_set_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0, bool _swig_go_1) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   bool arg2 ;
   
@@ -1851,7 +1759,7 @@ void _wrap_lms_stream_meta_t_waitForTimestamp_set_limewrap_a2e644da1ad7f293(lms_
 }
 
 
-bool _wrap_lms_stream_meta_t_waitForTimestamp_get_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0) {
+bool _wrap_lms_stream_meta_t_waitForTimestamp_get_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -1864,7 +1772,7 @@ bool _wrap_lms_stream_meta_t_waitForTimestamp_get_limewrap_a2e644da1ad7f293(lms_
 }
 
 
-void _wrap_lms_stream_meta_t_flushPartialPacket_set_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0, bool _swig_go_1) {
+void _wrap_lms_stream_meta_t_flushPartialPacket_set_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0, bool _swig_go_1) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   bool arg2 ;
   
@@ -1876,7 +1784,7 @@ void _wrap_lms_stream_meta_t_flushPartialPacket_set_limewrap_a2e644da1ad7f293(lm
 }
 
 
-bool _wrap_lms_stream_meta_t_flushPartialPacket_get_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0) {
+bool _wrap_lms_stream_meta_t_flushPartialPacket_get_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -1889,7 +1797,7 @@ bool _wrap_lms_stream_meta_t_flushPartialPacket_get_limewrap_a2e644da1ad7f293(lm
 }
 
 
-lms_stream_meta_t *_wrap_new_lms_stream_meta_t_limewrap_a2e644da1ad7f293() {
+lms_stream_meta_t *_wrap_new_lms_stream_meta_t_limewrap_a37b50197546cf98() {
   lms_stream_meta_t *result = 0 ;
   lms_stream_meta_t *_swig_go_result;
   
@@ -1900,7 +1808,7 @@ lms_stream_meta_t *_wrap_new_lms_stream_meta_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_delete_lms_stream_meta_t_limewrap_a2e644da1ad7f293(lms_stream_meta_t *_swig_go_0) {
+void _wrap_delete_lms_stream_meta_t_limewrap_a37b50197546cf98(lms_stream_meta_t *_swig_go_0) {
   lms_stream_meta_t *arg1 = (lms_stream_meta_t *) 0 ;
   
   arg1 = *(lms_stream_meta_t **)&_swig_go_0; 
@@ -1910,7 +1818,7 @@ void _wrap_delete_lms_stream_meta_t_limewrap_a2e644da1ad7f293(lms_stream_meta_t 
 }
 
 
-void _wrap_lms_stream_t_handle_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, long long _swig_go_1) {
+void _wrap_lms_stream_t_handle_set_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, long long _swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   size_t arg2 ;
   
@@ -1922,7 +1830,7 @@ void _wrap_lms_stream_t_handle_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig
 }
 
 
-long long _wrap_lms_stream_t_handle_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+long long _wrap_lms_stream_t_handle_get_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   size_t result;
   long long _swig_go_result;
@@ -1935,7 +1843,7 @@ long long _wrap_lms_stream_t_handle_get_limewrap_a2e644da1ad7f293(lms_stream_t *
 }
 
 
-void _wrap_lms_stream_t_isTx_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, bool _swig_go_1) {
+void _wrap_lms_stream_t_isTx_set_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, bool _swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   bool arg2 ;
   
@@ -1947,7 +1855,7 @@ void _wrap_lms_stream_t_isTx_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_g
 }
 
 
-bool _wrap_lms_stream_t_isTx_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+bool _wrap_lms_stream_t_isTx_get_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -1960,79 +1868,57 @@ bool _wrap_lms_stream_t_isTx_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_g
 }
 
 
-void _wrap_lms_stream_t_channel_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_t_channel_set_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->channel = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_t_channel_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+intgo _wrap_lms_stream_t_channel_get_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_t **)&_swig_go_0; 
   
-  result =  ((arg1)->channel);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->channel);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_t_fifoSize_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_t_fifoSize_set_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->fifoSize = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_t_fifoSize_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+intgo _wrap_lms_stream_t_fifoSize_get_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_t **)&_swig_go_0; 
   
-  result =  ((arg1)->fifoSize);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->fifoSize);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_t_throughputVsLatency_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, float _swig_go_1) {
+void _wrap_lms_stream_t_throughputVsLatency_set_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, float _swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   float arg2 ;
   
@@ -2044,7 +1930,7 @@ void _wrap_lms_stream_t_throughputVsLatency_set_limewrap_a2e644da1ad7f293(lms_st
 }
 
 
-float _wrap_lms_stream_t_throughputVsLatency_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+float _wrap_lms_stream_t_throughputVsLatency_get_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   float result;
   float _swig_go_result;
@@ -2057,7 +1943,7 @@ float _wrap_lms_stream_t_throughputVsLatency_get_limewrap_a2e644da1ad7f293(lms_s
 }
 
 
-intgo _wrap_LMS_FMT_F32_lms_stream_t_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_FMT_F32_lms_stream_t_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -2069,7 +1955,7 @@ intgo _wrap_LMS_FMT_F32_lms_stream_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_FMT_I16_lms_stream_t_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_FMT_I16_lms_stream_t_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -2081,7 +1967,7 @@ intgo _wrap_LMS_FMT_I16_lms_stream_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-intgo _wrap_LMS_FMT_I12_lms_stream_t_limewrap_a2e644da1ad7f293() {
+intgo _wrap_LMS_FMT_I12_lms_stream_t_limewrap_a37b50197546cf98() {
   int result;
   intgo _swig_go_result;
   
@@ -2093,7 +1979,7 @@ intgo _wrap_LMS_FMT_I12_lms_stream_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_lms_stream_t_dataFmt_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, intgo _swig_go_1) {
+void _wrap_lms_stream_t_dataFmt_set_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   int arg2 ;
   
@@ -2105,7 +1991,7 @@ void _wrap_lms_stream_t_dataFmt_set_limewrap_a2e644da1ad7f293(lms_stream_t *_swi
 }
 
 
-intgo _wrap_lms_stream_t_dataFmt_get_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+intgo _wrap_lms_stream_t_dataFmt_get_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2118,7 +2004,7 @@ intgo _wrap_lms_stream_t_dataFmt_get_limewrap_a2e644da1ad7f293(lms_stream_t *_sw
 }
 
 
-lms_stream_t *_wrap_new_lms_stream_t_limewrap_a2e644da1ad7f293() {
+lms_stream_t *_wrap_new_lms_stream_t_limewrap_a37b50197546cf98() {
   lms_stream_t *result = 0 ;
   lms_stream_t *_swig_go_result;
   
@@ -2129,7 +2015,7 @@ lms_stream_t *_wrap_new_lms_stream_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_delete_lms_stream_t_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+void _wrap_delete_lms_stream_t_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   
   arg1 = *(lms_stream_t **)&_swig_go_0; 
@@ -2139,7 +2025,7 @@ void _wrap_delete_lms_stream_t_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_
 }
 
 
-void _wrap_lms_stream_status_t_active_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, bool _swig_go_1) {
+void _wrap_lms_stream_status_t_active_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, bool _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   bool arg2 ;
   
@@ -2151,7 +2037,7 @@ void _wrap_lms_stream_status_t_active_set_limewrap_a2e644da1ad7f293(lms_stream_s
 }
 
 
-bool _wrap_lms_stream_status_t_active_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+bool _wrap_lms_stream_status_t_active_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   bool result;
   bool _swig_go_result;
@@ -2164,187 +2050,132 @@ bool _wrap_lms_stream_status_t_active_get_limewrap_a2e644da1ad7f293(lms_stream_s
 }
 
 
-void _wrap_lms_stream_status_t_fifoFilledCount_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_status_t_fifoFilledCount_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->fifoFilledCount = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_status_t_fifoFilledCount_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+intgo _wrap_lms_stream_status_t_fifoFilledCount_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
   
-  result =  ((arg1)->fifoFilledCount);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->fifoFilledCount);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_status_t_fifoSize_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_status_t_fifoSize_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->fifoSize = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_status_t_fifoSize_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+intgo _wrap_lms_stream_status_t_fifoSize_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
   
-  result =  ((arg1)->fifoSize);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->fifoSize);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_status_t_underrun_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_status_t_underrun_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->underrun = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_status_t_underrun_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+intgo _wrap_lms_stream_status_t_underrun_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
   
-  result =  ((arg1)->underrun);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->underrun);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_status_t_overrun_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_status_t_overrun_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->overrun = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_status_t_overrun_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+intgo _wrap_lms_stream_status_t_overrun_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
   
-  result =  ((arg1)->overrun);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->overrun);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_status_t_droppedPackets_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, uint32_t *_swig_go_1) {
+void _wrap_lms_stream_status_t_droppedPackets_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, intgo _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t arg2 ;
-  uint32_t *argp2 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
-  
-  argp2 = (uint32_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint32_t");
-  }
-  arg2 = (uint32_t)*argp2;
-  
+  arg2 = (uint32_t)_swig_go_1; 
   
   if (arg1) (arg1)->droppedPackets = arg2;
   
 }
 
 
-uint32_t *_wrap_lms_stream_status_t_droppedPackets_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+intgo _wrap_lms_stream_status_t_droppedPackets_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint32_t result;
-  uint32_t *_swig_go_result;
+  intgo _swig_go_result;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
   
-  result =  ((arg1)->droppedPackets);
-  {
-    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
-    memmove(resultptr, &result, sizeof(uint32_t));
-    *(uint32_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint32_t) ((arg1)->droppedPackets);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_stream_status_t_sampleRate_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, double _swig_go_1) {
+void _wrap_lms_stream_status_t_sampleRate_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, double _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   float_type arg2 ;
   
@@ -2356,7 +2187,7 @@ void _wrap_lms_stream_status_t_sampleRate_set_limewrap_a2e644da1ad7f293(lms_stre
 }
 
 
-double _wrap_lms_stream_status_t_sampleRate_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+double _wrap_lms_stream_status_t_sampleRate_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   float_type result;
   double _swig_go_result;
@@ -2369,7 +2200,7 @@ double _wrap_lms_stream_status_t_sampleRate_get_limewrap_a2e644da1ad7f293(lms_st
 }
 
 
-void _wrap_lms_stream_status_t_linkRate_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, double _swig_go_1) {
+void _wrap_lms_stream_status_t_linkRate_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, double _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   float_type arg2 ;
   
@@ -2381,7 +2212,7 @@ void _wrap_lms_stream_status_t_linkRate_set_limewrap_a2e644da1ad7f293(lms_stream
 }
 
 
-double _wrap_lms_stream_status_t_linkRate_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+double _wrap_lms_stream_status_t_linkRate_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   float_type result;
   double _swig_go_result;
@@ -2394,43 +2225,32 @@ double _wrap_lms_stream_status_t_linkRate_get_limewrap_a2e644da1ad7f293(lms_stre
 }
 
 
-void _wrap_lms_stream_status_t_timestamp_set_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0, uint64_t *_swig_go_1) {
+void _wrap_lms_stream_status_t_timestamp_set_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0, long long _swig_go_1) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint64_t arg2 ;
-  uint64_t *argp2 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
-  
-  argp2 = (uint64_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint64_t");
-  }
-  arg2 = (uint64_t)*argp2;
-  
+  arg2 = (uint64_t)_swig_go_1; 
   
   if (arg1) (arg1)->timestamp = arg2;
   
 }
 
 
-uint64_t *_wrap_lms_stream_status_t_timestamp_get_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+long long _wrap_lms_stream_status_t_timestamp_get_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   uint64_t result;
-  uint64_t *_swig_go_result;
+  long long _swig_go_result;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
   
-  result =  ((arg1)->timestamp);
-  {
-    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
-    memmove(resultptr, &result, sizeof(uint64_t));
-    *(uint64_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint64_t) ((arg1)->timestamp);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-lms_stream_status_t *_wrap_new_lms_stream_status_t_limewrap_a2e644da1ad7f293() {
+lms_stream_status_t *_wrap_new_lms_stream_status_t_limewrap_a37b50197546cf98() {
   lms_stream_status_t *result = 0 ;
   lms_stream_status_t *_swig_go_result;
   
@@ -2441,7 +2261,7 @@ lms_stream_status_t *_wrap_new_lms_stream_status_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_delete_lms_stream_status_t_limewrap_a2e644da1ad7f293(lms_stream_status_t *_swig_go_0) {
+void _wrap_delete_lms_stream_status_t_limewrap_a37b50197546cf98(lms_stream_status_t *_swig_go_0) {
   lms_stream_status_t *arg1 = (lms_stream_status_t *) 0 ;
   
   arg1 = *(lms_stream_status_t **)&_swig_go_0; 
@@ -2451,7 +2271,7 @@ void _wrap_delete_lms_stream_status_t_limewrap_a2e644da1ad7f293(lms_stream_statu
 }
 
 
-intgo _wrap_LMS_SetupStream_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, lms_stream_t *_swig_go_1) {
+intgo _wrap_LMS_SetupStream_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, lms_stream_t *_swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   lms_stream_t *arg2 = (lms_stream_t *) 0 ;
   int result;
@@ -2466,7 +2286,7 @@ intgo _wrap_LMS_SetupStream_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_DestroyStream_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, lms_stream_t *_swig_go_1) {
+intgo _wrap_LMS_DestroyStream_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, lms_stream_t *_swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   lms_stream_t *arg2 = (lms_stream_t *) 0 ;
   int result;
@@ -2481,7 +2301,7 @@ intgo _wrap_LMS_DestroyStream_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0
 }
 
 
-intgo _wrap_LMS_StartStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+intgo _wrap_LMS_StartStream_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2494,7 +2314,7 @@ intgo _wrap_LMS_StartStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) 
 }
 
 
-intgo _wrap_LMS_StopStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
+intgo _wrap_LMS_StopStream_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   int result;
   intgo _swig_go_result;
@@ -2507,7 +2327,7 @@ intgo _wrap_LMS_StopStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0) {
 }
 
 
-intgo _wrap_LMS_RecvStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, void *_swig_go_1, long long _swig_go_2, lms_stream_meta_t *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_LMS_RecvStream_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, void *_swig_go_1, long long _swig_go_2, lms_stream_meta_t *_swig_go_3, intgo _swig_go_4) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   void *arg2 = (void *) 0 ;
   size_t arg3 ;
@@ -2528,7 +2348,7 @@ intgo _wrap_LMS_RecvStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, v
 }
 
 
-intgo _wrap_LMS_GetStreamStatus_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, lms_stream_status_t *_swig_go_1) {
+intgo _wrap_LMS_GetStreamStatus_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, lms_stream_status_t *_swig_go_1) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   lms_stream_status_t *arg2 = (lms_stream_status_t *) 0 ;
   int result;
@@ -2543,7 +2363,7 @@ intgo _wrap_LMS_GetStreamStatus_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go
 }
 
 
-intgo _wrap_LMS_SendStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, void *_swig_go_1, long long _swig_go_2, lms_stream_meta_t *_swig_go_3, intgo _swig_go_4) {
+intgo _wrap_LMS_SendStream_limewrap_a37b50197546cf98(lms_stream_t *_swig_go_0, void *_swig_go_1, long long _swig_go_2, lms_stream_meta_t *_swig_go_3, intgo _swig_go_4) {
   lms_stream_t *arg1 = (lms_stream_t *) 0 ;
   void *arg2 = (void *) 0 ;
   size_t arg3 ;
@@ -2564,25 +2384,18 @@ intgo _wrap_LMS_SendStream_limewrap_a2e644da1ad7f293(lms_stream_t *_swig_go_0, v
 }
 
 
-intgo _wrap_LMS_UploadWFM_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, void **_swig_go_1, uint8_t *_swig_go_2, long long _swig_go_3, intgo _swig_go_4) {
+intgo _wrap_LMS_UploadWFM_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, void **_swig_go_1, char _swig_go_2, long long _swig_go_3, intgo _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   void **arg2 = (void **) 0 ;
   uint8_t arg3 ;
   size_t arg4 ;
   int arg5 ;
-  uint8_t *argp3 ;
   int result;
   intgo _swig_go_result;
   
   arg1 = *(lms_device_t **)&_swig_go_0; 
   arg2 = *(void ***)&_swig_go_1; 
-  
-  argp3 = (uint8_t *)_swig_go_2;
-  if (argp3 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint8_t");
-  }
-  arg3 = (uint8_t)*argp3;
-  
+  arg3 = (uint8_t)_swig_go_2; 
   arg4 = (size_t)_swig_go_3; 
   arg5 = (int)_swig_go_4; 
   
@@ -2592,7 +2405,7 @@ intgo _wrap_LMS_UploadWFM_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, vo
 }
 
 
-intgo _wrap_LMS_EnableTxWFM_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, intgo _swig_go_1, bool _swig_go_2) {
+intgo _wrap_LMS_EnableTxWFM_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, intgo _swig_go_1, bool _swig_go_2) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   unsigned int arg2 ;
   bool arg3 ;
@@ -2609,7 +2422,7 @@ intgo _wrap_LMS_EnableTxWFM_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, 
 }
 
 
-intgo _wrap_LMS_GetProgramModes_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _gostring_* _swig_go_1) {
+intgo _wrap_LMS_GetProgramModes_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, _gostring_* _swig_go_1) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   lms_name_t *arg2 = (lms_name_t *) 0 ;
   int result;
@@ -2624,7 +2437,7 @@ intgo _wrap_LMS_GetProgramModes_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go
 }
 
 
-intgo _wrap_LMS_Program_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _gostring_ _swig_go_1, long long _swig_go_2, _gostring_ _swig_go_3, void** _swig_go_4) {
+intgo _wrap_LMS_Program_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0, _gostring_ _swig_go_1, long long _swig_go_2, _gostring_ _swig_go_3, void** _swig_go_4) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   char *arg2 = (char *) 0 ;
   size_t arg3 ;
@@ -2655,7 +2468,7 @@ intgo _wrap_LMS_Program_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0, _gos
 }
 
 
-void _wrap_lms_dev_info_t_deviceName_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_deviceName_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2679,7 +2492,7 @@ void _wrap_lms_dev_info_t_deviceName_set_limewrap_a2e644da1ad7f293(lms_dev_info_
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_deviceName_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_deviceName_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2692,7 +2505,7 @@ _gostring_ _wrap_lms_dev_info_t_deviceName_get_limewrap_a2e644da1ad7f293(lms_dev
 }
 
 
-void _wrap_lms_dev_info_t_expansionName_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_expansionName_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2716,7 +2529,7 @@ void _wrap_lms_dev_info_t_expansionName_set_limewrap_a2e644da1ad7f293(lms_dev_in
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_expansionName_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_expansionName_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2729,7 +2542,7 @@ _gostring_ _wrap_lms_dev_info_t_expansionName_get_limewrap_a2e644da1ad7f293(lms_
 }
 
 
-void _wrap_lms_dev_info_t_firmwareVersion_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_firmwareVersion_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2753,7 +2566,7 @@ void _wrap_lms_dev_info_t_firmwareVersion_set_limewrap_a2e644da1ad7f293(lms_dev_
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_firmwareVersion_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_firmwareVersion_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2766,7 +2579,7 @@ _gostring_ _wrap_lms_dev_info_t_firmwareVersion_get_limewrap_a2e644da1ad7f293(lm
 }
 
 
-void _wrap_lms_dev_info_t_hardwareVersion_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_hardwareVersion_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2790,7 +2603,7 @@ void _wrap_lms_dev_info_t_hardwareVersion_set_limewrap_a2e644da1ad7f293(lms_dev_
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_hardwareVersion_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_hardwareVersion_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2803,7 +2616,7 @@ _gostring_ _wrap_lms_dev_info_t_hardwareVersion_get_limewrap_a2e644da1ad7f293(lm
 }
 
 
-void _wrap_lms_dev_info_t_protocolVersion_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_protocolVersion_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2827,7 +2640,7 @@ void _wrap_lms_dev_info_t_protocolVersion_set_limewrap_a2e644da1ad7f293(lms_dev_
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_protocolVersion_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_protocolVersion_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2840,43 +2653,32 @@ _gostring_ _wrap_lms_dev_info_t_protocolVersion_get_limewrap_a2e644da1ad7f293(lm
 }
 
 
-void _wrap_lms_dev_info_t_boardSerialNumber_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, uint64_t *_swig_go_1) {
+void _wrap_lms_dev_info_t_boardSerialNumber_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, long long _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   uint64_t arg2 ;
-  uint64_t *argp2 ;
   
   arg1 = *(lms_dev_info_t **)&_swig_go_0; 
-  
-  argp2 = (uint64_t *)_swig_go_1;
-  if (argp2 == NULL) {
-    _swig_gopanic("Attempt to dereference null uint64_t");
-  }
-  arg2 = (uint64_t)*argp2;
-  
+  arg2 = (uint64_t)_swig_go_1; 
   
   if (arg1) (arg1)->boardSerialNumber = arg2;
   
 }
 
 
-uint64_t *_wrap_lms_dev_info_t_boardSerialNumber_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+long long _wrap_lms_dev_info_t_boardSerialNumber_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   uint64_t result;
-  uint64_t *_swig_go_result;
+  long long _swig_go_result;
   
   arg1 = *(lms_dev_info_t **)&_swig_go_0; 
   
-  result =  ((arg1)->boardSerialNumber);
-  {
-    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
-    memmove(resultptr, &result, sizeof(uint64_t));
-    *(uint64_t **)&_swig_go_result = resultptr;
-  }
+  result = (uint64_t) ((arg1)->boardSerialNumber);
+  _swig_go_result = result; 
   return _swig_go_result;
 }
 
 
-void _wrap_lms_dev_info_t_gatewareVersion_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_gatewareVersion_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2900,7 +2702,7 @@ void _wrap_lms_dev_info_t_gatewareVersion_set_limewrap_a2e644da1ad7f293(lms_dev_
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_gatewareVersion_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_gatewareVersion_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2913,7 +2715,7 @@ _gostring_ _wrap_lms_dev_info_t_gatewareVersion_get_limewrap_a2e644da1ad7f293(lm
 }
 
 
-void _wrap_lms_dev_info_t_gatewareTargetBoard_set_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_lms_dev_info_t_gatewareTargetBoard_set_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0, _gostring_ _swig_go_1) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *arg2 ;
   
@@ -2937,7 +2739,7 @@ void _wrap_lms_dev_info_t_gatewareTargetBoard_set_limewrap_a2e644da1ad7f293(lms_
 }
 
 
-_gostring_ _wrap_lms_dev_info_t_gatewareTargetBoard_get_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+_gostring_ _wrap_lms_dev_info_t_gatewareTargetBoard_get_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -2950,7 +2752,7 @@ _gostring_ _wrap_lms_dev_info_t_gatewareTargetBoard_get_limewrap_a2e644da1ad7f29
 }
 
 
-lms_dev_info_t *_wrap_new_lms_dev_info_t_limewrap_a2e644da1ad7f293() {
+lms_dev_info_t *_wrap_new_lms_dev_info_t_limewrap_a37b50197546cf98() {
   lms_dev_info_t *result = 0 ;
   lms_dev_info_t *_swig_go_result;
   
@@ -2961,7 +2763,7 @@ lms_dev_info_t *_wrap_new_lms_dev_info_t_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_delete_lms_dev_info_t_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig_go_0) {
+void _wrap_delete_lms_dev_info_t_limewrap_a37b50197546cf98(lms_dev_info_t *_swig_go_0) {
   lms_dev_info_t *arg1 = (lms_dev_info_t *) 0 ;
   
   arg1 = *(lms_dev_info_t **)&_swig_go_0; 
@@ -2971,7 +2773,7 @@ void _wrap_delete_lms_dev_info_t_limewrap_a2e644da1ad7f293(lms_dev_info_t *_swig
 }
 
 
-lms_dev_info_t *_wrap_LMS_GetDeviceInfo_limewrap_a2e644da1ad7f293(lms_device_t *_swig_go_0) {
+lms_dev_info_t *_wrap_LMS_GetDeviceInfo_limewrap_a37b50197546cf98(lms_device_t *_swig_go_0) {
   lms_device_t *arg1 = (lms_device_t *) 0 ;
   lms_dev_info_t *result = 0 ;
   lms_dev_info_t *_swig_go_result;
@@ -2984,7 +2786,7 @@ lms_dev_info_t *_wrap_LMS_GetDeviceInfo_limewrap_a2e644da1ad7f293(lms_device_t *
 }
 
 
-_gostring_ _wrap_LMS_GetLibraryVersion_limewrap_a2e644da1ad7f293() {
+_gostring_ _wrap_LMS_GetLibraryVersion_limewrap_a37b50197546cf98() {
   char *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -2995,7 +2797,7 @@ _gostring_ _wrap_LMS_GetLibraryVersion_limewrap_a2e644da1ad7f293() {
 }
 
 
-_gostring_ _wrap_LMS_GetLastErrorMessage_limewrap_a2e644da1ad7f293() {
+_gostring_ _wrap_LMS_GetLastErrorMessage_limewrap_a37b50197546cf98() {
   char *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -3006,7 +2808,7 @@ _gostring_ _wrap_LMS_GetLastErrorMessage_limewrap_a2e644da1ad7f293() {
 }
 
 
-void _wrap_LMS_RegisterLogHandler_limewrap_a2e644da1ad7f293(void** _swig_go_0) {
+void _wrap_LMS_RegisterLogHandler_limewrap_a37b50197546cf98(void** _swig_go_0) {
   LMS_LogHandler arg1 = (LMS_LogHandler) 0 ;
   
   arg1 = *(LMS_LogHandler *)&_swig_go_0; 

@@ -9,27 +9,27 @@ import (
 )
 
 type i_deviceinfo struct {
-	DeviceName [64]byte
-	FirmwareVersion [16]byte
-	HardwareVersion [16]byte
-	ProtocolVersion [16]byte
-	BoardSerialNumber uint64
-	GatewareVersion [16]byte
+	DeviceName          [64]byte
+	FirmwareVersion     [16]byte
+	HardwareVersion     [16]byte
+	ProtocolVersion     [16]byte
+	BoardSerialNumber   uint64
+	GatewareVersion     [16]byte
 	GatewareTargetBoard [32]byte
 }
 
 type DeviceInfo struct {
-	DeviceName string
-	Media string
-	Module string
-	Addr string
-	Serial string
-	ProtocolVersion string
-	FirmwareVersion string
-	HardwareVersion string
-	GatewareVersion string
+	DeviceName          string
+	Media               string
+	Module              string
+	Addr                string
+	Serial              string
+	ProtocolVersion     string
+	FirmwareVersion     string
+	HardwareVersion     string
+	GatewareVersion     string
 	GatewareTargetBoard string
-	origDevInfo i_deviceinfo
+	origDevInfo         i_deviceinfo
 }
 
 func (d *i_deviceinfo) toOrigDevString() string {
@@ -45,7 +45,7 @@ func GetDevices() []DeviceInfo {
 
 	if devCount > 0 {
 		var z [128]i_deviceinfo
-		t := (*string) (unsafe.Pointer(&z))
+		t := (*string)(unsafe.Pointer(&z))
 		limewrap.LMS_GetDeviceList(t)
 		for i := 0; i < devCount; i++ {
 			ret[i] = idev2dev(z[i])
@@ -58,6 +58,8 @@ func GetDevices() []DeviceInfo {
 func Open(device DeviceInfo) *LMSDevice {
 	var ret = LMSDevice{
 		DeviceInfo: device,
+		IQFormat: FormatInt16,
+		controlChan: make(chan bool),
 	}
 	var origString = device.origDevInfo.toOrigDevString()
 

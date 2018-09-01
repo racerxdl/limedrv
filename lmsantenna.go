@@ -2,16 +2,7 @@ package limedrv
 
 import (
 	"fmt"
-	"github.com/racerxdl/limedrv/limewrap"
 )
-
-type LMSChannel struct {
-	Antennas    []LMSAntenna
-	IsRX        bool
-	parent      *LMSDevice
-	parentIndex int
-	stream 		limewrap.Lms_stream_t
-}
 
 type LMSAntenna struct {
 	Name             string
@@ -21,26 +12,6 @@ type LMSAntenna struct {
 	Step             float64
 	parent           *LMSChannel
 	index            int
-}
-
-func (c *LMSChannel) Enable() {
-	c.parent.EnableChannel(c.parentIndex, c.IsRX)
-}
-
-func (c *LMSChannel) Disable() {
-	c.parent.DisableChannel(c.parentIndex, c.IsRX)
-}
-
-func (c *LMSChannel) start() {
-	if c.stream != nil {
-		limewrap.LMS_StartStream(c.stream)
-	}
-}
-
-func (c *LMSChannel) stop() {
-	if c.stream != nil {
-		limewrap.LMS_StopStream(c.stream)
-	}
 }
 
 func (a *LMSAntenna) Set() {

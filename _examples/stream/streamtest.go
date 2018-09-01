@@ -35,10 +35,19 @@ func main() {
 
 	log.Println(d.String())
 
-	d.EnableChannel(limedrv.ChannelA, true)
-	d.EnableChannel(limedrv.ChannelB, true)
-	d.SetAntennaByName("LNAW", limedrv.ChannelA, true)
-	d.SetAntennaByName("LNAW", limedrv.ChannelB, true)
+	//d.EnableChannel(limedrv.ChannelA, true)
+	//d.EnableChannel(limedrv.ChannelB, true)
+	//d.SetAntennaByName("LNAW", limedrv.ChannelA, true)
+	//d.SetAntennaByName("LNAW", limedrv.ChannelB, true)
+
+	var ch = d.RXChannels[limedrv.ChannelA]
+
+	ch.Enable()
+	ch.SetAntennaByName("LNAW")
+	ch.SetGainNormalized(0.5)
+	ch.SetLPF(1e6)
+	ch.EnableLPF()
+	ch.SetCenterFrequency(106.3e6)
 
 	d.SetCallback(OnSamples)
 

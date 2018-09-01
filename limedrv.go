@@ -57,10 +57,13 @@ func GetDevices() []DeviceInfo {
 
 func Open(device DeviceInfo) *LMSDevice {
 	var ret = LMSDevice{
-		DeviceInfo: device,
-		IQFormat: FormatInt16,
+		DeviceInfo:  device,
+		IQFormat:    FormatInt16,
 		controlChan: make(chan bool),
 	}
+
+	ret.Advanced = LMSDeviceAdvanced{}
+
 	var origString = device.origDevInfo.toOrigDevString()
 
 	ptr := uintptr(0)

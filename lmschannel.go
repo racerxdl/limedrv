@@ -60,6 +60,21 @@ func (c *LMSChannel) DisableLPF() *LMSChannel {
 	return c
 }
 
+func (c *LMSChannel) SetDigitalLPF(bandwidth float64) *LMSChannel {
+	c.parent.SetDigitalFilter(c.parentIndex, c.IsRX, bandwidth)
+	return c
+}
+
+func (c *LMSChannel) EnableDigitalLPF() *LMSChannel {
+	c.parent.EnableDigitalFilter(c.parentIndex, c.IsRX)
+	return c
+}
+
+func (c *LMSChannel) DisableDigitalLPF() *LMSChannel {
+	c.parent.DisableDigitalFilter(c.parentIndex, c.IsRX)
+	return c
+}
+
 func (c *LMSChannel) SetAntenna(idx int) *LMSChannel {
 	c.parent.SetAntenna(idx, c.parentIndex, c.IsRX)
 	return c

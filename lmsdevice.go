@@ -3,7 +3,7 @@ package limedrv
 import (
 	"fmt"
 	"github.com/racerxdl/limedrv/limewrap"
-	"log"
+	"os"
 	"strings"
 	"unsafe"
 )
@@ -60,6 +60,7 @@ func (d *LMSDevice) loadChannels() {
 			IsRX:        true,
 			parent:      d,
 			parentIndex: i,
+			advancedFiltering: false,
 		}
 		antennas := limewrap.LMS_GetAntennaList(d.dev, limewrap.LmsChRx, int64(i), nil)
 		ch.Antennas = make([]LMSAntenna, antennas)
@@ -99,6 +100,7 @@ func (d *LMSDevice) loadChannels() {
 			IsRX:        false,
 			parent:      d,
 			parentIndex: i,
+			advancedFiltering: false,
 		}
 		antennas := limewrap.LMS_GetAntennaList(d.dev, limewrap.LmsChTx, int64(i), nil)
 		ch.Antennas = make([]LMSAntenna, antennas)
@@ -198,9 +200,9 @@ func (d *LMSDevice) deviceLoop() {
 	}
 
 	// Notify Main thread that we're done caching
-	log.Println("Device Loop ready.")
+	//log.Println("Device Loop ready.")
 	d.controlChan <- true
-	log.Println("Device Loop running with", len(cachedActiveChannels), "channels")
+	//log.Println("Device Loop running with", len(cachedActiveChannels), "channels")
 	running := true
 	for running {
 		select {
@@ -214,7 +216,7 @@ func (d *LMSDevice) deviceLoop() {
 	}
 
 	// Wait for stopping streams
-	log.Println("Stopping streams")
+	//log.Println("Stopping streams")
 	for i := 0; i < len(streamControl); i++ {
 		select {
 		case streamControl[i] <- true: // Send close signal
@@ -316,7 +318,7 @@ func (d *LMSDevice) EnableDigitalFilter(channelNumber int, isRX bool) {
 		ch = d.TXChannels[channelNumber]
 	}
 
-	if ch.advancedFiltering {
+	if !ch.advancedFiltering {
 		if ch.currentDigitalBandwidth == 0 {
 			panic(fmt.Sprintf("Cannot enable digital filter at channel %d because no bandwidth is set! Call SetDigitalFilter first.", channelNumber))
 		}
@@ -397,11 +399,11 @@ func (d *LMSDevice) Start() {
 	if !d.running {
 		d.running = true
 		go d.deviceLoop()
-		log.Println("Waiting for device loop be ready")
+		//log.Println("Waiting for device loop be ready")
 		<-d.controlChan
-		log.Println("Device started")
+		//log.Println("Device started")
 	} else {
-		log.Println("Device already running")
+		fmt.Fprintf(os.Stderr,"Device already running")
 	}
 }
 
@@ -409,10 +411,10 @@ func (d *LMSDevice) Stop() {
 	if d.running {
 		d.running = false
 		d.controlChan <- false
-		log.Println("Waiting loop to stop")
+		//log.Println("Waiting loop to stop")
 		<-d.controlChan
 	} else {
-		log.Println("Device not running")
+		fmt.Fprintf(os.Stderr,"Device not running")
 	}
 }
 

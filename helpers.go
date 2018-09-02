@@ -6,7 +6,6 @@ import (
 	"encoding/binary"
 	"fmt"
 	"github.com/racerxdl/limedrv/limewrap"
-	"log"
 	"strings"
 	"unsafe"
 )
@@ -22,7 +21,7 @@ type channelMessage struct {
 }
 
 func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
-	log.Println("Worker Started")
+	//fmt.Fprintf(os.Stderr,"Worker Started")
 	running := true
 	sampleLength := 4
 	if channel.parent.IQFormat == FormatInt16 || channel.parent.IQFormat == FormatInt12 {
@@ -35,23 +34,23 @@ func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
 	m.SetTimestamp(0)
 	m.SetFlushPartialPacket(false)
 	m.SetWaitForTimestamp(false)
-	log.Println("Worker Running")
+	//fmt.Fprintf(os.Stderr,"Worker Running")
 	for running {
 		select {
-		case b := <-con:
-			log.Println("Worker Received stop", b)
+		case _ = <-con:
+			//fmt.Fprintf(os.Stderr,"Worker Received stop", b)
 			running = false
 			return
 		default:
 		}
 
-		recvSamples := limewrap.LMS_RecvStream(channel.stream, zeroPointer, 16384, m, 1000)
+		recvSamples := limewrap.LMS_RecvStream(channel.stream, zeroPointer, 16384, m, 100)
 		if recvSamples > 0 {
 			chunk := buff[:sampleLength*recvSamples*2]
 			rbuf := bytes.NewReader(chunk)
 			cm := channelMessage{
 				channel:   channel.parentIndex,
-				data:      make([]complex64, recvSamples/2),
+				data:      make([]complex64, recvSamples),
 				timestamp: m.GetTimestamp(),
 			}
 
@@ -59,13 +58,13 @@ func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
 				// Float32
 				v := make([]float32, recvSamples)
 				binary.Read(rbuf, binary.LittleEndian, &v)
-				for i := 0; i < recvSamples/2; i++ {
+				for i := 0; i < recvSamples; i++ {
 					cm.data[i] = complex(v[i*2], v[i*2+1])
 				}
 			} else {
 				// Int16
 				var i16a, i16b int16
-				for i := 0; i < recvSamples/2; i++ {
+				for i := 0; i < recvSamples; i++ {
 					binary.Read(rbuf, binary.LittleEndian, &i16a)
 					binary.Read(rbuf, binary.LittleEndian, &i16b)
 					cm.data[i] = complex(float32(i16a)/32768, float32(i16b)/32768)

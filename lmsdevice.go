@@ -57,9 +57,9 @@ func (d *LMSDevice) loadChannels() {
 	d.RXChannels = make([]*LMSChannel, rxChannels)
 	for i := 0; i < rxChannels; i++ {
 		ch := LMSChannel{
-			IsRX:        true,
-			parent:      d,
-			parentIndex: i,
+			IsRX:              true,
+			parent:            d,
+			parentIndex:       i,
 			advancedFiltering: false,
 		}
 		antennas := limewrap.LMS_GetAntennaList(d.dev, limewrap.LmsChRx, int64(i), nil)
@@ -97,9 +97,9 @@ func (d *LMSDevice) loadChannels() {
 	d.TXChannels = make([]*LMSChannel, txChannels)
 	for i := 0; i < txChannels; i++ {
 		ch := LMSChannel{
-			IsRX:        false,
-			parent:      d,
-			parentIndex: i,
+			IsRX:              false,
+			parent:            d,
+			parentIndex:       i,
 			advancedFiltering: false,
 		}
 		antennas := limewrap.LMS_GetAntennaList(d.dev, limewrap.LmsChTx, int64(i), nil)
@@ -403,7 +403,7 @@ func (d *LMSDevice) Start() {
 		<-d.controlChan
 		//log.Println("Device started")
 	} else {
-		fmt.Fprintf(os.Stderr,"Device already running")
+		fmt.Fprintf(os.Stderr, "Device already running")
 	}
 }
 
@@ -414,7 +414,7 @@ func (d *LMSDevice) Stop() {
 		//log.Println("Waiting loop to stop")
 		<-d.controlChan
 	} else {
-		fmt.Fprintf(os.Stderr,"Device not running")
+		fmt.Fprintf(os.Stderr, "Device not running")
 	}
 }
 

@@ -1,3 +1,6 @@
+// limedrv is a LMS7 API Wrapper to Go made to be easy to use.
+// Currently this documentation is WIP. Some examples are available
+// in _examples folder.
 package limedrv
 
 import (
@@ -18,6 +21,7 @@ type i_deviceinfo struct {
 	GatewareTargetBoard [32]byte
 }
 
+// DeviceInfo is a struct with driver information required to open a connection
 type DeviceInfo struct {
 	DeviceName          string
 	Media               string
@@ -39,6 +43,7 @@ func (d *i_deviceinfo) toOrigDevString() string {
 	return string(buf.Bytes())
 }
 
+// GetDevices return an array of available devices in the LMS7 driver.
 func GetDevices() []DeviceInfo {
 	devCount := limewrap.LMS_GetDeviceList(nil)
 	ret := make([]DeviceInfo, devCount)
@@ -55,6 +60,7 @@ func GetDevices() []DeviceInfo {
 	return ret
 }
 
+// Open opens a device specified by a DeviceInfo instance and returns a reference to LMSDevice
 func Open(device DeviceInfo) *LMSDevice {
 	var ret = LMSDevice{
 		DeviceInfo:  device,
@@ -81,6 +87,7 @@ func Open(device DeviceInfo) *LMSDevice {
 	return &ret
 }
 
+// Close closes a LMSDevice. This makes the LMSDevice instance useless.
 func Close(device *LMSDevice) {
 	if limewrap.LMS_Close(device.dev) != 0 {
 		panic(fmt.Sprintf("Failed to close %s at %s.", device.DeviceInfo.DeviceName, device.DeviceInfo.Media))

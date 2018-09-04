@@ -2,22 +2,42 @@ package limedrv
 
 import "github.com/racerxdl/limedrv/limewrap"
 
-const ChannelA = 0
-const ChannelB = 1
+// Preset of channel IDs by name. To be used in channel calls.
+const (
+	// ChannelA represents the ID of Channel A in LMS Devices ( = 0 )
+	ChannelA = 0
 
-const LNAW = "LNAW"
-const LNAH = "LNAH"
-const LNAL = "LNAL"
-const NONE = "NONE"
+	// ChannelB represents the ID of Channel B in LMS Devices ( = 1 )
+	ChannelB = 1
+)
 
-const LB1 = "LB1"
-const LB2 = "LB2"
+// Preset of Antenna Names to be used in SetAntennaByName
+const (
+	// RX Antennas
+	LNAW = "LNAW"
+	LNAH = "LNAH"
+	LNAL = "LNAL"
 
-const BAND1 = "BAND1"
-const BAND2 = "BAND2"
+	// Loopback Antennas (works for both RX and TX)
+	LB1 = "LB1"
+	LB2 = "LB2"
+
+	// TX Antennas
+	BAND1 = "BAND1"
+	BAND2 = "BAND2"
+
+	// Not connected
+	NONE = "NONE"
+)
 
 const fifoSize = 16384 // Samples
 
-var FormatFloat32 = limewrap.Lms_stream_tLMS_FMT_F32
-var FormatInt16 = limewrap.Lms_stream_tLMS_FMT_I16
-var FormatInt12 = limewrap.Lms_stream_tLMS_FMT_I12
+// IQ Formats to be set in IQFormat of LMSDevice. This sets the communication between the LMS Device and the computer.
+var (
+	// FormatFloat32 defines the output of LMS Device to have samples using 32 bit float
+	FormatFloat32 = limewrap.Lms_stream_tLMS_FMT_F32
+	// FormatInt16 defines the output of LMS Device to have samples using 16 bit int
+	FormatInt16 = limewrap.Lms_stream_tLMS_FMT_I16
+	// FormatInt12 defines the output of LMS Device to have samples using 12 bit int
+	FormatInt12 = limewrap.Lms_stream_tLMS_FMT_I12
+)

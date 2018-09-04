@@ -1,10 +1,10 @@
 # limedrv
 LimeSuite Wrapper on Go (Driver for LimeSDR Devices)
 
-
 # Usage
 
-So far I need to do all the comments for the methods (since go auto-generates the documentation). But while I do that, you can check the examples.
+So far I need to do all the comments for the methods (since go auto-generates the documentation).
+But while I do that, you can check the examples. The documentation is available at: [https://godoc.org/github.com/racerxdl/limedrv](https://godoc.org/github.com/racerxdl/limedrv)
 
 
 # Examples

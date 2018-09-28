@@ -135,8 +135,8 @@ func (c *LMSChannel) start() {
 	}
 }
 
-func (c *LMSChannel) stop() {
-	if c.stream != nil {
-		limewrap.LMS_StopStream(c.stream)
-	}
-}
+//func (c *LMSChannel) stop() {
+//	if c.stream != nil {
+//		limewrap.LMS_StopStream(c.stream)
+//	}
+//}

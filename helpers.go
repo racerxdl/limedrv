@@ -21,6 +21,7 @@ type channelMessage struct {
 }
 
 func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
+	var err error
 	//fmt.Fprintf(os.Stderr,"Worker Started")
 	running := true
 	sampleLength := 4
@@ -57,7 +58,10 @@ func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
 			if sampleLength == 4 {
 				// Float32
 				v := make([]float32, recvSamples)
-				binary.Read(rbuf, binary.LittleEndian, &v)
+				err = binary.Read(rbuf, binary.LittleEndian, &v)
+				if err != nil {
+					panic(err)
+				}
 				for i := 0; i < recvSamples; i++ {
 					cm.data[i] = complex(v[i*2], v[i*2+1])
 				}
@@ -65,8 +69,14 @@ func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
 				// Int16
 				var i16a, i16b int16
 				for i := 0; i < recvSamples; i++ {
-					binary.Read(rbuf, binary.LittleEndian, &i16a)
-					binary.Read(rbuf, binary.LittleEndian, &i16b)
+					err = binary.Read(rbuf, binary.LittleEndian, &i16a)
+					if err != nil {
+						panic(err)
+					}
+					err = binary.Read(rbuf, binary.LittleEndian, &i16b)
+					if err != nil {
+						panic(err)
+					}
 					cm.data[i] = complex(float32(i16a)/32768, float32(i16b)/32768)
 				}
 			}

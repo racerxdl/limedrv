@@ -39,7 +39,6 @@ type LMSDevice struct {
 	Advanced LMSDeviceAdvanced
 
 	dev         uintptr
-	initialized bool
 	controlChan chan bool
 	running     bool
 	callback    func([]complex64, int, uint64)
@@ -221,7 +220,7 @@ func (d *LMSDevice) deviceLoop() {
 	running := true
 	for running {
 		select {
-		case _ = <-d.controlChan:
+		case <-d.controlChan:
 			running = false
 		case msg := <-lmsDataChannel:
 			if d.callback != nil {

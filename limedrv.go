@@ -38,9 +38,12 @@ type DeviceInfo struct {
 
 func (d *i_deviceinfo) toOrigDevString() string {
 	var buf bytes.Buffer
-	binary.Write(&buf, binary.LittleEndian, d)
+	err := binary.Write(&buf, binary.LittleEndian, d)
+	if err != nil {
+		panic(err)
+	}
 
-	return string(buf.Bytes())
+	return buf.String()
 }
 
 // GetDevices return an array of available devices in the LMS7 driver.

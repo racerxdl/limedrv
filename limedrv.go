@@ -8,6 +8,7 @@ import (
 	"encoding/binary"
 	"fmt"
 	"github.com/racerxdl/limedrv/limewrap"
+	"runtime"
 	"unsafe"
 )
 
@@ -48,6 +49,8 @@ func (d *i_deviceinfo) toOrigDevString() string {
 
 // GetDevices return an array of available devices in the LMS7 driver.
 func GetDevices() []DeviceInfo {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	devCount := limewrap.LMS_GetDeviceList(nil)
 	ret := make([]DeviceInfo, devCount)
 
@@ -77,8 +80,9 @@ func Open(device DeviceInfo) *LMSDevice {
 
 	ptr := uintptr(0)
 
+	runtime.LockOSThread()
 	v := limewrap.LMS_Open(&ptr, origString, 0)
-
+	runtime.UnlockOSThread()
 	ret.dev = ptr
 
 	if v != 0 {

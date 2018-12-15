@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/racerxdl/limedrv/limewrap"
 	"os"
+	"runtime"
 	"strings"
 	"unsafe"
 )
@@ -47,6 +48,8 @@ type LMSDevice struct {
 // region Private Methods
 
 func (d *LMSDevice) init() {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_Reset(d.dev) != 0 {
 		panic(fmt.Sprintf("Failed to reset %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -60,6 +63,8 @@ func (d *LMSDevice) init() {
 }
 
 func (d *LMSDevice) loadChannels() {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	// region Load RX Channels
 	var bw = createLms_range_t()
 	limewrap.LMS_GetLPFBWRange(d.dev, limewrap.LmsChRx, bw)
@@ -144,6 +149,8 @@ func (d *LMSDevice) loadChannels() {
 }
 
 func (d *LMSDevice) initSampleRateRange() {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	var bw = createLms_range_t()
 	if limewrap.LMS_GetSampleRateRange(d.dev, limewrap.LmsChRx, bw) != 0 {
 		panic(fmt.Sprintf("Failed to get sample rate range %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
@@ -155,6 +162,8 @@ func (d *LMSDevice) initSampleRateRange() {
 }
 
 func (d *LMSDevice) setupStream(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	var ch *LMSChannel
 
 	if isRX {
@@ -249,6 +258,8 @@ func (d *LMSDevice) SetCallback(cb func([]complex64, int, uint64)) {
 
 // SetGainDB Sets the gain of the channel to specified value in dB
 func (d *LMSDevice) SetGainDB(channelNumber int, isRX bool, gain uint) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetGaindB(d.dev, !isRX, int64(channelNumber), gain) != 0 {
 		panic(fmt.Sprintf("Failed to set channel gain in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -256,6 +267,8 @@ func (d *LMSDevice) SetGainDB(channelNumber int, isRX bool, gain uint) {
 
 // SetGainNormalized sets the gain of the channel to specified normalized value [0-1] with 0 being no gain, 1 being maximum gain.
 func (d *LMSDevice) SetGainNormalized(channelNumber int, isRX bool, gain float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetNormalizedGain(d.dev, !isRX, int64(channelNumber), gain) != 0 {
 		panic(fmt.Sprintf("Failed to set channel gain in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -263,6 +276,8 @@ func (d *LMSDevice) SetGainNormalized(channelNumber int, isRX bool, gain float64
 
 // GetGainDB returns the currently set gain in specified channel
 func (d *LMSDevice) GetGainDB(channelNumber int, isRX bool) (gain uint) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_GetGaindB(d.dev, !isRX, int64(channelNumber), &gain) != 0 {
 		panic(fmt.Sprintf("Failed to get channel gain in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -271,6 +286,8 @@ func (d *LMSDevice) GetGainDB(channelNumber int, isRX bool) (gain uint) {
 
 // GetGainNormalized returns the currently set gain in specified channel
 func (d *LMSDevice) GetGainNormalized(channelNumber int, isRX bool) (gain float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_GetNormalizedGain(d.dev, !isRX, int64(channelNumber), &gain) != 0 {
 		panic(fmt.Sprintf("Failed to get channel gain in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -279,6 +296,8 @@ func (d *LMSDevice) GetGainNormalized(channelNumber int, isRX bool) (gain float6
 
 // GetTemperature returns the temperature in degrees celsius of the LMS Device
 func (d *LMSDevice) GetTemperature() (temp float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_GetChipTemperature(d.dev, 0, &temp) != 0 {
 		panic(fmt.Sprintf("Failed to get chip temperature in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -288,6 +307,8 @@ func (d *LMSDevice) GetTemperature() (temp float64) {
 // SetLPF sets the analog Low Pass Filter bandwidth for the specified channel.
 // bandwidth is passed in Hertz
 func (d *LMSDevice) SetLPF(channelNumber int, isRX bool, bandwidth float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetLPFBW(d.dev, !isRX, int64(channelNumber), bandwidth) != 0 {
 		panic(fmt.Sprintf("Failed to set LPF Bandwidth in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -295,6 +316,8 @@ func (d *LMSDevice) SetLPF(channelNumber int, isRX bool, bandwidth float64) {
 
 // GetLPF gets the analog Low Pass Filter bandwidth in Hertz
 func (d *LMSDevice) GetLPF(channelNumber int, isRX bool) (bandwidth float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_GetLPFBW(d.dev, !isRX, int64(channelNumber), &bandwidth) != 0 {
 		panic(fmt.Sprintf("Failed to get LPF Bandwidth in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -304,6 +327,8 @@ func (d *LMSDevice) GetLPF(channelNumber int, isRX bool) (bandwidth float64) {
 
 // EnableLPF enables the Analog Low Pass filter in specified channel
 func (d *LMSDevice) EnableLPF(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetLPF(d.dev, !isRX, int64(channelNumber), true) != 0 {
 		panic(fmt.Sprintf("Failed to enable LPF in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -311,6 +336,8 @@ func (d *LMSDevice) EnableLPF(channelNumber int, isRX bool) {
 
 // DisableLPF disables the Analog Low Pass filter in the specified channel
 func (d *LMSDevice) DisableLPF(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetLPF(d.dev, !isRX, int64(channelNumber), false) != 0 {
 		panic(fmt.Sprintf("Failed to disable LPF in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -320,6 +347,8 @@ func (d *LMSDevice) DisableLPF(channelNumber int, isRX bool) {
 // bandwidth in hertz
 // Requires Sample Rate to be set before calling this.
 func (d *LMSDevice) SetDigitalFilter(channelNumber int, isRX bool, bandwidth float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	var ch *LMSChannel
 	if isRX {
 		ch = d.RXChannels[channelNumber]
@@ -340,6 +369,8 @@ func (d *LMSDevice) SetDigitalFilter(channelNumber int, isRX bool, bandwidth flo
 
 // EnableDigitalFilter enables the digital (GFIR) Low pass filter for specified channel.
 func (d *LMSDevice) EnableDigitalFilter(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	var ch *LMSChannel
 	if isRX {
 		ch = d.RXChannels[channelNumber]
@@ -364,6 +395,8 @@ func (d *LMSDevice) EnableDigitalFilter(channelNumber int, isRX bool) {
 
 // DisableDigitalFilter disables digital (GFIR) Low Pass filter for specified channel.
 func (d *LMSDevice) DisableDigitalFilter(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	var ch *LMSChannel
 	if isRX {
 		ch = d.RXChannels[channelNumber]
@@ -383,6 +416,8 @@ func (d *LMSDevice) DisableDigitalFilter(channelNumber int, isRX bool) {
 
 // EnableChannel enables a channel to be received in callback
 func (d *LMSDevice) EnableChannel(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_EnableChannel(d.dev, !isRX, int64(channelNumber), true) != 0 {
 		panic(fmt.Sprintf("Failed to enable channel in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -391,6 +426,8 @@ func (d *LMSDevice) EnableChannel(channelNumber int, isRX bool) {
 
 // DisableChannel disables a channel to be received in callback
 func (d *LMSDevice) DisableChannel(channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_EnableChannel(d.dev, !isRX, int64(channelNumber), false) != 0 {
 		panic(fmt.Sprintf("Failed to disable channel in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -398,6 +435,8 @@ func (d *LMSDevice) DisableChannel(channelNumber int, isRX bool) {
 
 // SetAntenna sets the input antenna for the specified channel.
 func (d *LMSDevice) SetAntenna(antennaNumber, channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetAntenna(d.dev, !isRX, int64(channelNumber), int64(antennaNumber)) != 0 {
 		panic(fmt.Sprintf("Failed to set antenna in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -405,6 +444,8 @@ func (d *LMSDevice) SetAntenna(antennaNumber, channelNumber int, isRX bool) {
 
 // SetAntennaByName sets the input antenna for the specified channel by using its representation name, for example LNAW
 func (d *LMSDevice) SetAntennaByName(name string, channelNumber int, isRX bool) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	var ant *LMSAntenna
 	if isRX {
 		var c = d.RXChannels[channelNumber]
@@ -464,6 +505,8 @@ func (d *LMSDevice) Stop() {
 // the limesdr hardware will run at 8e6 sps and decimate by 8 before sending to the FPGA
 // this way you can increase the resolution without affecting the bandwidth to the computer
 func (d *LMSDevice) SetSampleRate(sampleRate float64, oversample int) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetSampleRate(d.dev, sampleRate, int64(oversample)) != 0 {
 		panic(fmt.Sprintf("Failed to set SampleRate to %f in %s at %s: %s", sampleRate, d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -473,6 +516,8 @@ func (d *LMSDevice) SetSampleRate(sampleRate float64, oversample int) {
 // If a SetSampleRate has been called with samplerate of 1e6 and overSample of 8,
 // This call will return 1e6 in host and 8e6 in rf.
 func (d *LMSDevice) GetSampleRate() (host float64, rf float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	host = float64(0)
 	rf = float64(0)
 	//LMS_GetSampleRate (lms_device_t *device, bool dir_tx, size_t chan, float_type *host_Hz, float_type *rf_Hz)
@@ -488,6 +533,8 @@ func (d *LMSDevice) GetSampleRate() (host float64, rf float64) {
 // because of that some hardware tricks are done to be able to work at different frequencies
 // leading to a certain limit of how spaced these two channels can be.
 func (d *LMSDevice) SetCenterFrequency(channelNumber int, isRX bool, centerFrequency float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_SetLOFrequency(d.dev, !isRX, int64(channelNumber), centerFrequency) != 0 {
 		panic(fmt.Sprintf("Failed to set Frequency in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}
@@ -495,6 +542,8 @@ func (d *LMSDevice) SetCenterFrequency(channelNumber int, isRX bool, centerFrequ
 
 // GetCenterFrequency gets the center frequency currently set in the channel.
 func (d *LMSDevice) GetCenterFrequency(channelNumber int, isRX bool) (centerFrequency float64) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
 	if limewrap.LMS_GetLOFrequency(d.dev, !isRX, int64(channelNumber), &centerFrequency) != 0 {
 		panic(fmt.Sprintf("Failed to set Frequency in %s at %s: %s", d.DeviceInfo.DeviceName, d.DeviceInfo.Media, limewrap.LMS_GetLastErrorMessage()))
 	}

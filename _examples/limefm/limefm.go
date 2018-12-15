@@ -68,12 +68,14 @@ func main() {
 
 	var ch = d.RXChannels[*channel]
 
-	ch.Enable()
-	ch.SetAntennaByName(*antenna)
-	ch.SetGainNormalized(*gain)
-	ch.SetLPF(1.5e6).EnableLPF()
-	ch.SetDigitalLPF(300e3).EnableDigitalLPF()
-	ch.SetCenterFrequency(*centerFrequency)
+	ch.Enable().
+		SetAntennaByName(*antenna).
+		SetGainNormalized(*gain).
+		SetLPF(1.5e6).
+		EnableLPF().
+		SetDigitalLPF(300e3).
+		EnableDigitalLPF().
+		SetCenterFrequency(*centerFrequency)
 
 	d.SetCallback(OnSamples)
 

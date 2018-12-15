@@ -6,6 +6,7 @@ import (
 	"encoding/binary"
 	"fmt"
 	"github.com/racerxdl/limedrv/limewrap"
+	"runtime"
 	"strings"
 	"unsafe"
 )
@@ -67,17 +68,11 @@ func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
 				}
 			} else {
 				// Int16
-				var i16a, i16b int16
+				//var i16a, i16b int16
+				var i16buff = make([]int16, recvSamples*2)
+				err = binary.Read(rbuf, binary.LittleEndian, &i16buff)
 				for i := 0; i < recvSamples; i++ {
-					err = binary.Read(rbuf, binary.LittleEndian, &i16a)
-					if err != nil {
-						panic(err)
-					}
-					err = binary.Read(rbuf, binary.LittleEndian, &i16b)
-					if err != nil {
-						panic(err)
-					}
-					cm.data[i] = complex(float32(i16a)/32768, float32(i16b)/32768)
+					cm.data[i] = complex(float32(i16buff[i*2])/32768, float32(i16buff[i*2+1])/32768)
 				}
 			}
 
@@ -85,6 +80,7 @@ func streamLoop(c chan<- channelMessage, con chan bool, channel LMSChannel) {
 		} else if recvSamples == -1 {
 			fmt.Printf("Error receiving samples from channel %d\n", channel.parentIndex)
 		}
+		runtime.Gosched()
 	}
 }
 
